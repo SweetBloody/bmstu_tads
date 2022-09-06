@@ -1,0 +1,28 @@
+Alexandrinsky Theatre
+Government Inspector
+1299
+2999
+2
+3
+Maly Theatre
+The Minor
+1500
+5000
+2
+1
+Moscow Theatre of Musical
+Crime and Punishment
+1000
+1500
+3
+Artemyev
+Russia
+12
+3
+Moscow Doll Theatre
+Cinderella
+500
+1000
+1
+0
+1
