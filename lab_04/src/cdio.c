@@ -80,7 +80,7 @@ void print_list_stack_address(struct list_stack_t *pointer, struct mem_array_t m
 
     for (int i = index; i >= 0; i--)
     {
-        printf("|%17d   |%19p   |\n", array[i], (void*) mem[i]);
+        printf("|%17d   |%19p   |\n", array[i], (void *) mem[i]);
         printf("|--------------------|----------------------|\n");
     }
 
@@ -88,7 +88,7 @@ void print_list_stack_address(struct list_stack_t *pointer, struct mem_array_t m
         printf("Addresses that got free:\n");
 
     for (int i = 0; i < mem_array.index; i++)
-        printf("%p\n", (void*) mem_array.data[i]);
+        printf("%p\n", (void *) mem_array.data[i]);
 
     free(array);
     free(mem);
