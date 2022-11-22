@@ -34,7 +34,7 @@ int input_number(struct number *number)
     // Анализ символов до точки
     if (in_str[index] != '0' && in_str[index] != '.')
     {
-        while (isdigit(in_str[index]))
+        while (isdigit((int) in_str[index]))
         {
             int_tmp_part[index_int_tmp] = in_str[index];
             index += 1;
@@ -66,9 +66,9 @@ int input_number(struct number *number)
         to_norm_number(number, int_tmp_part, index_int_tmp, dec_tmp_part, index_dec_tmp, exp_tmp, index_exp_tmp);
         return 0;
     }
-    else if (isdigit(in_str[index]))
+    else if (isdigit((int) in_str[index]))
     {
-        while (isdigit(in_str[index]))
+        while (isdigit((int) in_str[index]))
         {
             dec_tmp_part[index_dec_tmp] = in_str[index];
             index += 1;
@@ -93,7 +93,7 @@ int input_number(struct number *number)
         return INCORRECT_INPUT;
 
     // Проверка знака порядка
-    if (isspace(in_str[index]) || isalpha(in_str[index]))
+    if (isspace((int) in_str[index]) || isalpha((int) in_str[index]))
         return INCORRECT_INPUT;
     else if (in_str[index] == '-' || in_str[index] == '+')
     {
@@ -103,17 +103,17 @@ int input_number(struct number *number)
     else
         number->exp_sign = '+';
 
-    if (isspace(in_str[index]) || isalpha(in_str[index]))
+    if (isspace((int) in_str[index]) || isalpha((int) in_str[index]))
         return INCORRECT_INPUT;
 
     // Анализ порядка
-    while (isdigit(in_str[index]))
+    while (isdigit((int) in_str[index]))
     {
         exp_tmp[index_exp_tmp] = in_str[index];
         index += 1;
         index_exp_tmp += 1;
 
-        if (isspace(in_str[index]) || isalpha(in_str[index]))
+        if (isspace((int) in_str[index]) || isalpha((int) in_str[index]))
             return INCORRECT_INPUT;
     }
 
