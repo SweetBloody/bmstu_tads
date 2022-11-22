@@ -56,7 +56,7 @@ void analysis()
 
     printf("|-----|-----------------------------|-----------------------------|\n");
     printf("|     |            time             |        memory (matrix)      |\n");
-    printf("|  %  |--------------|--------------|--------------|--------------|\n");
+    printf("|     |--------------|--------------|--------------|--------------|\n");
     printf("|     |   standart   |    sparse    |   standart   |    sparse    |\n");
     printf("|-----|--------------|--------------|--------------|--------------|\n");
 
@@ -72,7 +72,7 @@ void analysis()
         time1 = time_analysis(matrix, vector);
         time2 = time_analysis_sparse(matrix_s, vector_s);
 
-        printf("| %3d |   %8.0lf   |    %6.0lf    |   %8d   |    %6d    |\n",
+        printf("| %3d |   %8.0lf   |    %6.0lf    |   %8ld   |    %6ld    |\n",
                i, time1, time2, sizeof(matrix.data[0][0]) * matrix.rows * matrix.columns,
                (sizeof(matrix_s.data[0]) + sizeof(matrix_s.strings[0])) * matrix_s.pointer[matrix_s.columns] + sizeof(matrix_s.pointer[0]) * (matrix_s.columns + 1));
         printf("|-----|--------------|--------------|--------------|--------------|\n");

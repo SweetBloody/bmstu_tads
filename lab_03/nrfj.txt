@@ -1,0 +1,26 @@
+Vector:
+   0   0  -2   3   0
+Sparse vector:
+Data:      -2   3
+Columns:    2   3
+Pointer:    0   0   0   1   2   2
+
+Matrix:
+   0    3    0
+   0    0    0
+   0   -2    4
+   0    0    1
+   0    7    1
+
+Sparse matrix:
+Data:       3  -2   7   4   1   1
+Strings:    0   2   4   2   3   4
+Pointer:    0   0   3   6
+
+Matrix:
+   0    4   -5
+
+Sparse matrix:
+Data:       4  -5
+Strings:    0   0
+Pointer:    0   0   1   2

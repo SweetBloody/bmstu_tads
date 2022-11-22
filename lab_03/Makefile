@@ -5,7 +5,7 @@ CC := gcc
 CFLAGS := -std=c99 -Wall -Werror -pedantic -Wextra -Wfloat-equal -Wfloat-conversion -Iinc -ggdb
 
 ## Общие объектные файлы программы
-OBJS_MAIN := cdio.o file_process.o process.o
+OBJS_MAIN := cdio.o file_process.o process.o time_analysis.o
 
 app.exe : main.o $(OBJS_MAIN)
 	$(CC) -o $@ $^
@@ -21,6 +21,9 @@ file_process.o : src/file_process.c inc/file_process.h
 
 process.o : src/process.c inc/process.h
 	$(CC) $(CFLAGS) -c src/process.c -o $@
+
+time_analysis.o : src/time_analysis.c inc/time_analysis.h
+	$(CC) $(CFLAGS) -c src/time_analysis.c -o $@
 
 .PHONY : clean
 clean :
