@@ -511,10 +511,10 @@ void print_memory_table(struct theatre *array_theatre, struct key_theatre *array
     printf("|----------|-----------------|-----------------|\n");
     printf("|          |  Initial array  |    Key array    |\n");
     printf("|----------|-----------------|-----------------|\n");
-    printf("|   array  |  %13llu  |  %13llu  |\n",
+    printf("|   array  |  %13lu  |  %13lu  |\n",
            sizeof(array_theatre[0]) * length, sizeof(array_key_theatre[0]) * length);
     printf("|----------|-----------------|-----------------|\n");
-    printf("|  element |  %13llu  |  %13llu  |\n",
+    printf("|  element |  %13lu  |  %13lu  |\n",
            sizeof(array_theatre[0]), sizeof(array_key_theatre[0]));
     printf("|----------|-----------------|-----------------|\n");
 }
